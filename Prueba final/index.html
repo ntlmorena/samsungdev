@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1">
+	<meta http-equiv="X-UA-Compatible" content="ie=edge">	
+	<meta name="description" content="Create account">
+	<meta name="keywords" content="css, js, style, form">
+	<meta name="author" content="Natalia Macias Iglesias">
+	<meta name="date" content="Diciembre 17, 2022">
+	<meta name="designer" content="Natalia Macias Iglesias">
+	<meta name="language" content='ES'>
+	
+	<title>Create account</title>
+	
+	<link rel="stylesheet" href="style.css">
+	<script type="text/javascript" src="index.js"></script>
+
+</head>
+
+<body onload="creacionVariables()">
+
+	<!-- Menú superior-->		
+	<header>
+	</header>
+
+
+	<!-- Contenido de la página-->
+	<main>
+		<article>
+			<div class="container">
+
+				<!-- Formulario-->
+				<section class="container">
+
+						<form method="post">
+
+								<h2>Create Account</h2>
+								<!-- Nombre -->	
+								<div class="dato">
+									<label for="nombre">
+										<span>Nombre:</span>
+									</label>
+									<span id="nameIcon" class="iconEmp"></span>
+									<input type="text" id="name" name="name" title="Rellene el campo con un nombre" required onchange="nameCorrecto(this)" >
+									<span id="nameAlert" class="noalert">Nombre inválido<span>
+								</div>
+
+								
+								<!-- Email -->					
+								<div class="dato">
+									<label for="email">
+										<span>Email:</span>
+									</label>
+									<span id="emailIcon" class="iconEmp"></span>
+									<input type="email" id="email" name="email" title="Incluye un signo @ en la dirección de correo para que sea válida" required onchange="emailCorrecto(this)" >
+									<span id="emailAlert" class="noalert">Email inválido<span>
+								</div>
+								
+								
+								
+
+								<!-- Contraseña -->
+								<div class="dato">
+									<label for="clave">
+										<span>Clave:</span>
+									</label>
+									<span id="passIcon" class="iconEmp"></span>
+									<input type="password" id="clave" name="clave" title="La contraseña debe tener el menos 8 caracteres" required onchange="passCorrecto(this)" >
+									<span id="passAlert" class="noalert">Contraseña inválida<span>
+								</div>
+
+
+								<!-- Verificación -->								
+								<div class="dato">
+									<label for="verificacion">
+										<span>Confirme su clave:</span>
+									</label>
+									<span id="verIcon" class="iconEmp"></span>
+									<input type="password" id="verificacion" name="verificacion" title="La contraseña no coincide" required onchange="verificacionCorrecta(this)" >
+									<span id="verAlert" class="noalert">Rellene este campo con la misma contraseña<span>
+								</div>
+	
+							<!-- Submit --> 
+
+								<input type="button" class="button" value="Enviar" title="Pulsa el botón cuando rellenes todos los campos" onClick="enviar()">
+
+																
+						</form>
+						
+				</section>									
+			</div>
+		</article>		
+	</main>		
+	
+	
+	
+	<!-- Pie de página-->
+	<footer>	
+	</footer>
+
+</body>
+</html>
+
